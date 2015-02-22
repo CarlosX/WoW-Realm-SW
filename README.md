@@ -1,6 +1,7 @@
 # WoW-Realm-SW Mop
 
-  Copyright (C) 2014 CarlosX <https://www.facebook.com/carloscping>
+  Copyright (C) 2015 CarlosX <https://www.facebook.com/carloscping>
+  
   WoW-Realm-SW is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation; either version 2 of the License, or
@@ -15,8 +16,8 @@
   along with this program; if not, write to the Free Software
   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   
-  #### If you want to help me :)
-  [![ScreenShot](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](http://tinyurl.com/DonationX)
+#### If you want to help me :)
+[![ScreenShot](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](http://tinyurl.com/DonationX)
   
   
 ## Copyright

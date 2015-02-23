@@ -122,6 +122,9 @@
   <ItemGroup>
     <Content Include="icons\1420150934_17271.ico" />
     <Content Include="icons\prueba2.ico" />
+    <Content Include="sw_config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -132,8 +132,22 @@ namespace WoW_Realm_SW.Controlador
                 catch (ArgumentException) { }
             }
 
+            
 
+        }
 
+        public static void ReloadRealm()
+        {
+            ConfigDao.RealmlistAddressDataList.Clear();
+            //- Realm Names & Realmlist Addresses id:1
+            for (int i = 0; i < RealmNames.Count(); i++)
+            {
+                try
+                {
+                    ConfigDao.RealmlistAddressDataList.Add(RealmNames[i], RealmlistAddresses[i]);
+                }
+                catch (ArgumentException) { }
+            }
         }
     }
 }

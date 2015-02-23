@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.mephobiaTheme1 = new Theme.MephobiaTheme();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox2 = new Theme.MephobiaCheckBox();
             this.mephobiaButton7 = new Theme.MephobiaButton();
@@ -46,7 +47,6 @@
             this.mephobiaButton3 = new Theme.MephobiaButton();
             this.mephobiaButton2 = new Theme.MephobiaButton();
             this.mephobiaButton1 = new Theme.MephobiaButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.mephobiaTheme1.SuspendLayout();
             this.mephobiaGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +89,14 @@
             this.mephobiaTheme1.Text = "WoW Realm SW";
             this.mephobiaTheme1.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.mephobiaTheme1.Transparent = false;
+            // 
+            // label2
+            // 
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(443, 270);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 27);
+            this.label2.TabIndex = 17;
             // 
             // label1
             // 
@@ -341,15 +349,6 @@
             this.mephobiaButton1.Text = "New";
             this.mephobiaButton1.Transparent = false;
             this.mephobiaButton1.Click += new System.EventHandler(this.mephobiaButton1_Click);
-            // 
-            // label2
-            // 
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(443, 270);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 27);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "label2";
             // 
             // Form1
             // 

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using WoW_Realm_SW.Properties;
+using WoW_Realm_SW.Controlador;
 
 namespace WoW_Realm_SW
 {
@@ -102,6 +103,20 @@ namespace WoW_Realm_SW
             {
                 try
                 {
+                    //- Realmlist Addresses id:1
+                    ConfigDao.RealmlistAddresses.Add(this.realmlist);
+
+                    //- Realmlist Paths id:2
+                    ConfigDao.RealmlistPaths.Add(this.rpath);
+
+                    //- WoW Exe Paths id:3
+                    ConfigDao.WoWExePaths.Add(this.wpath);
+
+                    //- Realm Names id:1
+                    ConfigDao.RealmNames.Add(this.name);
+
+                    ConfigDao.ReloadRealm();
+
                     XmlDocument doc = new XmlDocument();
                     doc.Load(Settings.Default["xml_filename"].ToString());
 
@@ -128,6 +143,7 @@ namespace WoW_Realm_SW
                         _wowexepath.LastChild.InnerText = textBox4.Text;
 
                     doc.Save(Settings.Default["xml_filename"].ToString());
+                    
                 }
                 catch (Exception ex)
                 {

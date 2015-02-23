@@ -208,7 +208,7 @@ namespace WoW_Realm_SW
                 if (Settings.Default.clear_cache)
                 {
                     string MainDirectory = ConfigDao.WoWExePathDataList[listBox1.SelectedItem.ToString()];
-                    string root = Path.GetPathRoot(MainDirectory);
+                    string root = Path.GetDirectoryName(MainDirectory);
 
                     if (Directory.Exists(root + "\\Cache"))
                         Directory.Delete(root + "\\Cache", true);
@@ -230,15 +230,16 @@ namespace WoW_Realm_SW
 
                             while (!process.WaitForInputIdle()) ;
 
-                            Thread.Sleep(20);
+                            Thread.Sleep(50);
 
                             foreach (char accNameLetter in accountName)
                             {
                                 SendMessage(process.MainWindowHandle, WM_CHAR, new IntPtr(accNameLetter), IntPtr.Zero);
-                                Thread.Sleep(1);
+                                Thread.Sleep(5);
                             }
                             string p2 = ConfigDao.AccountsDataList[accountName];
                             string password = MyFunctions.base64Decode(p2);
+                            Thread.Sleep(2);
 
                             SendMessage(process.MainWindowHandle, WM_KEYUP, new IntPtr(VK_TAB), IntPtr.Zero);
                             SendMessage(process.MainWindowHandle, WM_KEYDOWN, new IntPtr(VK_TAB), IntPtr.Zero);
@@ -246,7 +247,7 @@ namespace WoW_Realm_SW
                             foreach (char accPassLetter in password)
                             {
                                 SendMessage(process.MainWindowHandle, WM_CHAR, new IntPtr(accPassLetter), IntPtr.Zero);
-                                Thread.Sleep(1);
+                                Thread.Sleep(5);
                             }
 
                             //! Login to account

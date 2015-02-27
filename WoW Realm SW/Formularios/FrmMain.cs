@@ -230,7 +230,7 @@ namespace WoW_Realm_SW
 
                             while (!process.WaitForInputIdle()) ;
 
-                            Thread.Sleep(50);
+                            Thread.Sleep(100);
 
                             foreach (char accNameLetter in accountName)
                             {
@@ -303,8 +303,12 @@ namespace WoW_Realm_SW
         private void mephobiaButton1_Click(object sender, EventArgs e)
         {
             FrmEditR frm = new FrmEditR();
+            frm.Real += form2_Real;
             frm.ShowDialog();
-            listBox1.Items.Clear();
+        }
+
+        private void form2_Real()
+        {
             LoadXMLToListbox();
         }
 
@@ -346,11 +350,13 @@ namespace WoW_Realm_SW
                     ConfigDao.RealmlistAddressDataList[listBox1.SelectedItem.ToString()],
                     ConfigDao.RealmlistPathDataList[listBox1.SelectedItem.ToString()],
                     ConfigDao.WoWExePathDataList[listBox1.SelectedItem.ToString()]);
-
+                form2.Real += form2_Real;
                 form2.ShowDialog();
+                
+                /*
                 LoadXMLToListbox();
                 listBox1.Refresh();
-                listBox1.ResetText();
+                listBox1.ResetText();*/
             }
             catch (NullReferenceException)
             {
